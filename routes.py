@@ -111,7 +111,7 @@ def update_student(student_id):
 def delete_student(student_id):
     student = Student.query.get_or_404(student_id)
     
-    # Optional: Delete associated image
+    # Optional: Delete associated images can
     if student.image:
         image_path = os.path.join(current_app.config['UPLOAD_FOLDER'], student.image)
         if os.path.exists(image_path):
